@@ -1,5 +1,13 @@
 # Challenge: Login Jim (SQL Injection)
 
+Category: Injection
+Points: 3 Stars
+Difficulty: Easy
+
+## Challenge Description
+
+Log in with the Jim's user account.
+
 ## Resource
 
 [OWASP Juice Shop - Injection Challenges](https://juice-shop.herokuapp.com/#/score-board?categories=Injection)

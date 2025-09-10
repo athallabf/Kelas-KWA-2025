@@ -1,5 +1,13 @@
 # Challenge: Login Admin (SQL Injection)
 
+Category: Injection
+Points: 2 Stars
+Difficulty: Easy
+
+## Challenge Description
+
+Log in with the administrator's user account.
+
 ## Resource
 
 [OWASP Juice Shop - Injection Challenges](https://juice-shop.herokuapp.com/#/score-board?categories=Injection)
