@@ -1,4 +1,4 @@
-# Challenge: NoSQL Manipulation (SQL Injection)
+# Challenge: NoSQL Manipulation
 
 Category: Injection
 Points: 4 Stars

@@ -1,4 +1,4 @@
-# Challenge: User Credentials (SQL Injection)
+# Challenge: User Credentials
 
 Category: Injection
 Points: 4 Stars
