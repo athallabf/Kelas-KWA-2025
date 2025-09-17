@@ -1,15 +1,17 @@
 # Tugas Keamanan Web dan Aplikasi 2025
 
-| Nama | Kelas | NRP |
-|----------|----------|----------|
-| Value A  | Value B  | Value C  |
+| Nama                 | Kelas | NRP        |
+| -------------------- | ----- | ---------- |
+| Athalla Barka Fadhil | A     | 5027231018 |
 
 ### Initialize
+
 ```
-git clone <repo-url>
+git clone git@github.com:Keamanan-Web-dan-Aplikasi-2025/tugas-kwa-athallabf.git
 ```
 
 ### Update assignments
+
 ```
 git add .
 git commit -m "Add assignment week X - Tugas <kelas/mandiri>"
