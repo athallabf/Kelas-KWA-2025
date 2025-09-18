@@ -2,7 +2,7 @@
 
 | Nama                 | Kelas | NRP        |
 | -------------------- | ----- | ---------- |
-| Athalla Barka Fadhil | A     | 5027231018 |
+| Athalla Barka Fadhil | B     | 5027231018 |
 
 ### Initialize
 
