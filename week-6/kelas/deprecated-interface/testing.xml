@@ -1,0 +1,12 @@
+<data>
+    <record id="1">
+        <name>Alice</name>
+        <age>30</age>
+        <city>New York</city>
+    </record>
+    <record id="2">
+        <name>Bob</name>
+        <age>24</age>
+        <city>Los Angeles</city>
+    </record>
+</data>
