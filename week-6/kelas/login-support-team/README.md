@@ -12,6 +12,7 @@ Mendapatkan akses ke akun tim pendukung dengan cara menganalisis file database k
 
 - [John the Ripper](https://www.openwall.com/john/)
 - [KeePass](https://keepass.info/)
+  [OWASP Juice Shop](https://juice-shop.herokuapp.com/#/score-board)
 
 ## Step-by-Step Solution
 
@@ -19,6 +20,7 @@ Mendapatkan akses ke akun tim pendukung dengan cara menganalisis file database k
     ![](images/step1-download.png)
 
 2.  Setelah mengunduh file `.kdbx`, kita menggunakan `keepass2john` untuk mengekstrak hash kata sandi utama dari file tersebut.
+
     ```bash
     keepass2john incident-support.kdbx > keepasshash.txt
     ```
@@ -30,9 +32,10 @@ Mendapatkan akses ke akun tim pendukung dengan cara menganalisis file database k
     ![](images/step4-romania.png)
 
 5.  **Analisis Petunjuk:**
-    -   Pesan error dalam bahasa Rumania tersebut berarti: *"Kata sandi tim pendukung tidak sesuai dengan kebijakan perusahaan untuk akun dengan hak istimewa! Harap ubah kata sandi Anda sesuai dengan itu!"*
-    -   Pencarian lebih lanjut pada kode mengarahkan kita pada sebuah ekspresi reguler (regex) yang mendefinisikan kebijakan kata sandi tersebut: `/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,30}/`.
-    -   Berdasarkan kebijakan ini dan petunjuk lain, ditemukan bahwa kata sandi utama untuk file `.kdbx` adalah `Support2022!`.
+
+    - Pesan error dalam bahasa Rumania tersebut berarti: _"Kata sandi tim pendukung tidak sesuai dengan kebijakan perusahaan untuk akun dengan hak istimewa! Harap ubah kata sandi Anda sesuai dengan itu!"_
+    - Pencarian lebih lanjut pada kode mengarahkan kita pada sebuah ekspresi reguler (regex) yang mendefinisikan kebijakan kata sandi tersebut: `/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,30}/`.
+    - Berdasarkan kebijakan ini dan petunjuk lain, ditemukan bahwa kata sandi utama untuk file `.kdbx` adalah `Support2022!`.
 
 6.  Kita menggunakan kata sandi `Support2022!` untuk membuka file `incident-support.kdbx` menggunakan KeePass.
     ![](images/step6-keepass.png)
@@ -48,7 +51,7 @@ Mendapatkan akses ke akun tim pendukung dengan cara menganalisis file database k
 
 - **Status:** ✅ Berhasil
 - **Root Cause:** Kebocoran file database kata sandi (`.kdbx`) dan adanya petunjuk mengenai kebijakan pembuatan kata sandi di dalam kode sumber aplikasi. Kata sandi utama yang lemah dan dapat ditebak juga menjadi faktor.
-- **Attack Vector:** *Offline password cracking* yang dibantu dengan analisis source code untuk mempersempit ruang pencarian kata sandi.
+- **Attack Vector:** _Offline password cracking_ yang dibantu dengan analisis source code untuk mempersempit ruang pencarian kata sandi.
 - **Key Insight:**
   - Kebocoran file sensitif seperti database kata sandi merupakan risiko keamanan yang sangat tinggi.
   - Petunjuk, bahkan yang tersamar (seperti pesan error dalam bahasa lain atau regex dalam kode), dapat secara signifikan membantu penyerang.
