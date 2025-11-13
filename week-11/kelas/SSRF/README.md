@@ -21,6 +21,7 @@ Lab ini menantang kita untuk menemukan URL rahasia yang tersembunyi dan mengguna
     ![](images/step4-changegravatar.png)
 
 5.  Aplikasi akan membuat permintaan dari server-side ke URL tersebut, dan tantangan akan terselesaikan.
+    ![](images/step5-success.png)
 
 ## Refleksi
 
