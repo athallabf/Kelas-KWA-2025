@@ -1,7 +1,3 @@
-Mantap\! Selamat, Anda berhasil melakukan _secure coding_ sekaligus _debugging_ masalah kompatibilitas library.
-
-Berikut adalah writeup untuk tantangan ini sesuai format yang Anda minta:
-
 # Challenge: Resource Hub – Path Traversal
 
 Category: Secure Coding
